@@ -22,7 +22,7 @@ Below is an index of the exploits available in this toolkit. Files are organized
 | **`stream_kpa_sliding.py`** | Stream Ciphers| Known Plaintext (KPA) | Extracts a keystream segment using a known plaintext-ciphertext pair and slides it across the target. |
 | **`xor_stream_collapse.py`** | Stream Ciphers| Known Plaintext (1 Byte) | Uses a single known plaintext byte to collapse an XOR equation and recover the static secret key. |
 | **`dsa_linear_nonce.py`** | Asymmetric | Linear Nonce (*k*) | Recovers the DSA private key *x* by solving a modular linear system built from related nonces. |
-| **`rsa_common_factor_gcd.py`**| Asymmetric | Prime Reuse (GCD) | Exploits poor prime generation by calculating the GCD of multiple RSA moduli to extract shared factors. |
+| **`rsa_common_factor_gcd.py`**| RSA | Prime Reuse (GCD) | Exploits poor prime generation by calculating the GCD of multiple RSA moduli to extract shared factors. |
 | **`timing_side_channel.py`** | Side-Channel | Timing Leak | Exploits an insecure string comparison by measuring server response latency to leak the flag. |
 | **`elf_error_oracle.py`** | Side-Channel | Error-Based Oracle | Brute-forces a local ELF binary by monitoring stdout/stderr for specific error strings. |
 | **`lfsr_bruteforce.py`** | Hardware/LFSR | State Space Exhaustion | Performs an offline brute-force of a 6-bit LFSR's seed, tap mask, and endianness. |
