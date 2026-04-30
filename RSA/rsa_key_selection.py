@@ -1,3 +1,20 @@
+"""
+🎯 Objective: Forgery of RSA Public Key to Validate a Pre-existing Signature.
+
+💀 Vulnerability: 
+- User-provided RSA parameters (p, q, e).
+- Lack of binding between the provided signature and the server's original modulus.
+- Vulnerability to Smooth Prime generation.
+
+🛠️ Method:
+1. Capture the target Hash (H) and Signature (sig) from the server.
+2. Generate custom primes p and q such that (p-1) and (q-1) are "smooth" (composed of small factors).
+3. Solve the Discrete Logarithm Problem (DLP) for e_p and e_q where sig^e ≡ H (mod p|q).
+4. Use the Pohlig-Hellman algorithm (via SymPy's discrete_log) to find these exponents efficiently.
+5. Combine the results using the Chinese Remainder Theorem (CRT) to find a global e_user.
+6. Submit p, q, and e_user to satisfy the condition sig^e_user ≡ H (mod p*q).
+-------------------------------------------------------------------------------
+"""
 from pwn import *
 import random
 from sympy import isprime, discrete_log
