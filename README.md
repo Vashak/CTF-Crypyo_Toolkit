@@ -30,7 +30,7 @@ Below is an index of the exploits available in this toolkit. Files are organized
 | `sha1_length_extension.py` | Hashes & MACs | Length Extension & Truncation | Exploits a SHA1 length extension attack on a Base64 MAC, chained with an insecure `split()` logic to truncate original parameters and inject malicious ones. |
 | `aes_hash_collision.py` | Hashes & MACs | Padding-as-Key Collision | Exploits a custom AES-based hash function by using predictable PKCS#7 padding as a decryption key to forge a 16-byte collision against a 32-byte target. |
 | `des_whitening_bypass.py` | Block Ciphers | ECB Determinism & Whitening | Exploits 3DES-ECB block alignment and predictable padding to bypass a custom XOR whitening layer and extract the hidden OTP. |
-| `rsa_negative_modulo_bypass.py` | RSA | Negative Modulo & Divisor Trap Bypass | Exploits an RSA decryption oracle by sending a negative ciphertext to extract -m mod n. Bypasses the divisor firewall and avoids the universal -1 divisibility trap through strict operation ordering. |
+| **`rsa_negative_modulo_bypass.py` | RSA | Negative Modulo & Divisor Trap Bypass | Exploits an RSA decryption oracle by sending a negative ciphertext to extract -m mod n. Bypasses the divisor firewall and avoids the universal -1 divisibility trap through strict operation ordering. |
 
 
 ---
