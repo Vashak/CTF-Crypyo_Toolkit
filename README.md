@@ -34,6 +34,8 @@ Below is an index of the exploits available in this toolkit. Files are organized
 | **`dh_small_exponent.py`** | Asymmetric | Weak DH Exponent | Exploits a drastically reduced exponent search space (1024) to recover DH private keys and decrypt AES-ECB payloads. |
 | **`dh_oracle_impersonation.py`** | Asymmetric | Oracle / Key Reuse | Exploits a DH oracle by feeding it specific public parameters to force the calculation and leakage of a past shared secret. |
 | **`dh_smooth_prime_injection.py`** | Asymmetric | Smooth Prime Injection | Exploits a smooth prime modulus to solve the Discrete Logarithm Problem (DLP) using the Pohlig-Hellman algorithm. |
+| **`rsa_square_modulus.py`** | Asymmetric | Square Modulus ($n = p^2$) | Exploits an RSA implementation where the modulus $N$ is a perfect square, allowing for immediate factorization and private key recovery. |
+
 
 
 
