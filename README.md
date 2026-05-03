@@ -33,6 +33,8 @@ Below is an index of the exploits available in this toolkit. Files are organized
 | **`rsa_negative_modulo_bypass.py`** | RSA | Negative Modulo & Divisor Trap Bypass | Exploits an RSA decryption oracle by sending a negative ciphertext to extract -m mod n. Bypasses the divisor firewall and avoids the universal -1 divisibility trap through strict operation ordering. |
 | **`dh_small_exponent.py`** | Asymmetric | Weak DH Exponent | Exploits a drastically reduced exponent search space (1024) to recover DH private keys and decrypt AES-ECB payloads. |
 | **`dh_oracle_impersonation.py`** | Asymmetric | Oracle / Key Reuse | Exploits a DH oracle by feeding it specific public parameters to force the calculation and leakage of a past shared secret. |
+| **`dh_smooth_prime_injection.py`** | Asymmetric | Smooth Prime Injection | Exploits a smooth prime modulus to solve the Discrete Logarithm Problem (DLP) using the Pohlig-Hellman algorithm. |
+
 
 
 ---
