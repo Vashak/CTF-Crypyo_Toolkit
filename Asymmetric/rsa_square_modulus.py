@@ -4,10 +4,11 @@
 💀 Vulnerability: Weak Prime Generation (Use of p2 instead of p⋅q)
 
 🛠️ Method:
-    Factorization via Integer Square Root: Since the modulus N is composed as p2 rather than the product of two distinct primes, p is recovered by simply calculating the integer square root of N.
-    Totient Calculation for Power of Primes: For a modulus n=pk, the Euler totient function is calculated as ϕ(n)=pk−pk−1. In this specific case (n=p2), it simplifies to ϕ(n)=p(p−1).
-    Private Key Reconstruction: With ϕ(n) available, the private exponent d is derived using the modular multiplicative inverse of e.
-    Standard RSA Decryption: The message is recovered via modular exponentiation M=Cd(modN).
+1 Factorization via Integer Square Root: Since the modulus N is composed as p2 rather than the product of two distinct primes, p is recovered by simply calculating the integer square root of N.
+2 Totient Calculation for Power of Primes: For a modulus n=pk, the Euler totient function is calculated as ϕ(n)=pk−pk−1. In this specific case (n=p2), it simplifies to ϕ(n)=p(p−1).
+3 Private Key Reconstruction: With ϕ(n) available, the private exponent d is derived using the modular multiplicative inverse of e.
+4 Standard RSA Decryption: The message is recovered via modular exponentiation M=Cd(modN).
+----------------------------------------------------------------------------------------
 """    
 import math
 from Crypto.Util.number import inverse, long_to_bytes
