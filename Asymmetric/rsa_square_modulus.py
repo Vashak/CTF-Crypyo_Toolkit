@@ -8,7 +8,8 @@
 2 Totient Calculation for Power of Primes: For a modulus n=pk, the Euler totient function is calculated as ϕ(n)=pk−pk−1. In this specific case (n=p2), it simplifies to ϕ(n)=p(p−1).
 3 Private Key Reconstruction: With ϕ(n) available, the private exponent d is derived using the modular multiplicative inverse of e.
 4 Standard RSA Decryption: The message is recovered via modular exponentiation M=Cd(modN).
-----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
 """    
 import math
 from Crypto.Util.number import inverse, long_to_bytes
