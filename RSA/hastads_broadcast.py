@@ -12,7 +12,6 @@
 6. Decodes the output and halts execution the moment the 'CCIT' flag signature is detected.
 
 -------------------------------------------------------------------------------
-| `hastads_broadcast.py` | Crypto / RSA | Low Exponent & CRT | Exploits RSA with e=5 by collecting 5 ciphertexts of the same message and fusing them via the Chinese Remainder Theorem to compute the exact integer root. |
 """
 
 from Crypto.Util.number import long_to_bytes
