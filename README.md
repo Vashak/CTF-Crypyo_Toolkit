@@ -39,7 +39,7 @@ Below is an index of the exploits available in this toolkit. Files are organized
 | **`rsa_birthday_paradox.py`** | RSA | Common Factor Extraction | Exploits a small prime pool in RSA key generation. Collects multiple moduli via pwntools, finds a shared prime using GCD (Birthday Paradox), and decrypts the targeted ciphertext. |
 | **`hastads_broadcast.py`** | RSA | Low Exponent & CRT | Exploits RSA with e=5 by collecting 5 ciphertexts of the same message and fusing them via the Chinese Remainder Theorem to compute the exact integer root. |
 | **`rsa_flawed_keygen.py`** | RSA | Flawed Keygen & Quadratic Equation | Exploits an improper generation of q where q = inverse(e, p), allowing a brute-force of a small parameter k to solve a quadratic equation for the prime factor p. |
-| **`rsa_repeated_squaring.py`** | RSA | Non-invertible `e` (`2^16`) | Exploits `e=2^16` by extracting 16 consecutive modular square roots through a quadratic residue expansion tree, operating entirely within `Z_p`. |
+| **`rsa_repeated_squaring.py`** | RSA | Non-invertible `e` (`2^16`) | Exploits `e=2^16` by extracting 16 consecutive modular square roots through a quadratic residue expansion tree, operating entirely within $\mathbb{Z}_p$. |
 
 ---
 
