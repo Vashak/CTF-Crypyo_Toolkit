@@ -37,6 +37,7 @@ Below is an index of the exploits available in this toolkit. Files are organized
 | **`rsa_square_modulus.py`** | Asymmetric | Square Modulus ($n = p^2$) | Exploits an RSA implementation where the modulus $N$ is a perfect square, allowing for immediate factorization and private key recovery. |
 | **`multi_prime_rsa_factordb.py`** | RSA | Multi-Prime Factorization | Exploits a Multi-Prime RSA implementation where $n$ is composed of 16 small 64-bit primes. Utilizes `factordb-pycli` to instantly fetch prime factors via API, bypassing local CPU constraints, and reconstructs the Euler's totient to decrypt the ciphertext and retrieve the flag. |
 | **`rsa_birthday_paradox.py`** | RSA | Common Factor Extraction | Exploits a small prime pool in RSA key generation. Collects multiple moduli via pwntools, finds a shared prime using GCD (Birthday Paradox), and decrypts the targeted ciphertext. |
+| **`hastads_broadcast.py`** | RSA | Low Exponent & CRT | Exploits RSA with e=5 by collecting 5 ciphertexts of the same message and fusing them via the Chinese Remainder Theorem to compute the exact integer root. |
 
 
 ---
