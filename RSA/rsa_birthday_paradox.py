@@ -11,7 +11,6 @@
 5. Reconstructs the Euler's totient `phi`, forges the private key `d`, and decrypts the flag.
 
 -------------------------------------------------------------------------------
-
 """
 from pwn import *
 
