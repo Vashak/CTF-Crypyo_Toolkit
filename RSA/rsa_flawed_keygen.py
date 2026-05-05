@@ -43,7 +43,7 @@ def main():
             M = long_to_bytes(pow(ct, d, n)).decode(errors='ignore')
             
             if 'CCIT' in M:
-                print(f"[🔥] FLAG RECUPERATA:\n{M.strip()}")
+                print(f"FLAG RECUPERATA:\n{M.strip()}")
                 break
 
 if __name__ == "__main__":
