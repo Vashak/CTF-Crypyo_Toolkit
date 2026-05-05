@@ -35,7 +35,7 @@ Below is an index of the exploits available in this toolkit. Files are organized
 | **`dh_oracle_impersonation.py`** | Asymmetric | Oracle / Key Reuse | Exploits a DH oracle by feeding it specific public parameters to force the calculation and leakage of a past shared secret. |
 | **`dh_smooth_prime_injection.py`** | Asymmetric | Smooth Prime Injection | Exploits a smooth prime modulus to solve the Discrete Logarithm Problem (DLP) using the Pohlig-Hellman algorithm. |
 | **`rsa_square_modulus.py`** | Asymmetric | Square Modulus ($n = p^2$) | Exploits an RSA implementation where the modulus $N$ is a perfect square, allowing for immediate factorization and private key recovery. |
-
+| **`multi_prime_rsa_factordb.py`** | RSA | Multi-Prime Factorization | Exploits a Multi-Prime RSA implementation where $n$ is composed of 16 small 64-bit primes. Utilizes `factordb-pycli` to instantly fetch prime factors via API, bypassing local CPU constraints, and reconstructs the Euler's totient to decrypt the ciphertext and retrieve the flag. |
 
 
 
