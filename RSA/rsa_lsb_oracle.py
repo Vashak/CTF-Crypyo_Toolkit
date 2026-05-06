@@ -1,4 +1,17 @@
+"""
+🎯 Objective: RSA LSB Oracle Exploitation & Public Key Extraction
 
+💀 Vulnerability: Unauthenticated encryption oracle combined with a Decryption Oracle that leaks the 3 least significant bits (M % 8) of the plaintext.
+
+🛠️ Method:
+1. Extracts the hidden modulus N by requesting the ciphertexts of small integers (2, 3, 4, 9).
+2. Computes the GCD of (C_2^2 - C_4) and (C_3^2 - C_9), repeatedly dividing by 2 to purge even factors and isolate the pure modulus N.
+3. Requests the encrypted flag (C_flag) and the encrypted modular inverse of 8 (C_inv8).
+4. Iteratively queries the decryption oracle, multiplying C_flag by C_inv8 % N at each step to shift the plaintext right by 3 bits.
+5. Purifies the oracle's output by subtracting the "ghost" of previously accumulated bits, applying the formula: (output - (flag_int * inv8_pow) % n) % 8.
+6. Accumulates the pure 3-bit fragments into a final large integer and converts it to the plaintext bytes.
+-------------------------------------------------------------------------------
+"""
 from Crypto.Util.number import *
 
 from pwn import *
