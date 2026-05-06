@@ -40,6 +40,7 @@ Below is an index of the exploits available in this toolkit. Files are organized
 | **`hastads_broadcast.py`** | RSA | Low Exponent & CRT | Exploits RSA with e=5 by collecting 5 ciphertexts of the same message and fusing them via the Chinese Remainder Theorem to compute the exact integer root. |
 | **`rsa_flawed_keygen.py`** | RSA | Flawed Keygen & Quadratic Equation | Exploits an improper generation of q where q = inverse(e, p), allowing a brute-force of a small parameter k to solve a quadratic equation for the prime factor p. |
 | **`rsa_repeated_squaring.py`** | RSA | Non-invertible `e` ($$2^{16}$$) | Exploits $$2^{16}$$ by extracting 16 consecutive modular square roots through a quadratic residue expansion tree, operating entirely within $\mathbb{Z}_p$. |
+| **`rsa_lsb_oracle.py`** | RSA | LSB Oracle & Modulus Extraction | Extracts a hidden RSA modulus using chosen plaintexts, then exploits a 3-bit LSB decryption oracle by iteratively multiplying the ciphertext by the encrypted modular inverse of 8, algebraically purifying the output to recover the flag. |
 
 ---
 
