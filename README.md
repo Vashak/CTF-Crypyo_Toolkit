@@ -4,7 +4,8 @@ This repository contains my personal collection of Python exploits and scripts d
 
 The toolkit covers a variety of attack vectors, from breaking classic algorithms (RSA, AES) to exploiting hardware vulnerabilities (LFSR) and side-channel data.
 
-> **🌟 Highlight:** Looking for something more advanced? Check out my standalone project where I bypassed ChaCha20 padding using linear cryptanalysis on GF(2): [https://github.com/Vashak/ChaCha20-Linear-Exploit]
+> **🌟 Highlight:** Looking for something more advanced? Check out my standalone exploits: [https://github.com/Vashak/ChaCha20-Linear-Exploit]
+[https://github.com/Vashak/Triwizard-Maze-Exploit]
 
 ## 🧰 The Arsenal
 
