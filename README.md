@@ -1,6 +1,6 @@
 # 🗡️ CTF Crypto Toolkit
 
-This repository contains my personal collection of Python exploits and scripts developed to solve Cryptography and Hardware Reverse Engineering challenges during Capture The Flag (CTF) competitions.
+This repository contains my personal collection of Python exploits and scripts developed to solve Cryptography and Hardware challenges during Capture The Flag (CTF) competitions.
 
 The toolkit covers a variety of attack vectors, from breaking classic algorithms (RSA, AES) to exploiting hardware vulnerabilities (LFSR) and side-channel data.
 
